@@ -14,4 +14,19 @@ export class AuthenticationService {
   {
     this.user = afAuth.authState;
   }
+
+  login(email: string, password: string) : Promise<firebase.auth.UserCredential>
+  {
+    return this.afAuth.signInWithEmailAndPassword(email, password);
+  }
+
+  logout(): Promise<void>
+  {
+    return this.afAuth.signOut();
+  }
+
+  resetPassword(email: string)
+  {
+    return this.afAuth.sendPasswordResetEmail(email);
+  }
 }
