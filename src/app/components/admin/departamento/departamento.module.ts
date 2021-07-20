@@ -5,6 +5,7 @@ import { DepartamentoRoutingModule } from './departamento-routing.module';
 import { DepartamentoComponent } from './departamento.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'primeng/api';
+import { ComumModule } from 'src/app/modules/comum/comum.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SharedModule } from 'primeng/api';
     CommonModule,
     DepartamentoRoutingModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    ComumModule
   ]
 })
 export class DepartamentoModule { }
